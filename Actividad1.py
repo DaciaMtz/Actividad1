@@ -46,14 +46,15 @@ def rectangle(start, end):
 
 def triangle(start, end):
     "Draw triangle from start to end."
-    silly = turtle.Turtle()
-    silly.forward(80)
-    silly.left(120)    
-    silly.forward(80)
-    silly.left(120)
-    silly.forward(80)
-    turtle.done()
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    for count in range(3):
+        forward(end.x - start.x)
+        left(120)
+        
+    end_fill()
 
 def tap(x, y):
     "Store starting point or draw shape."
