@@ -33,7 +33,16 @@ def drawcircle(start, end):
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
-    pass  # TODO
+    silly = turtle.Turtle()
+    silly.forward(150)
+    silly.right(90)    
+    silly.forward(50)
+    silly.right(90)
+    silly.forward(150)
+    silly.right(90)
+    silly.forward(50)
+    silly.right(90)
+    turtle.done()
 
 def triangle(start, end):
     "Draw triangle from start to end."
