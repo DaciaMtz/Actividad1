@@ -1,6 +1,7 @@
 from turtle import *
 from freegames import vector
 
+# Funcion que dibuja una linea
 def line(start, end):
     "Draw line from start to end."
     up()
@@ -8,19 +9,21 @@ def line(start, end):
     down()
     goto(end.x, end.y)
 
+# Funcion que dibuja un cuadrado
 def square(start, end):
     "Draw square from start to end."
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
-
+    #Ciclo for para hacer el cuadrado dando giros de 90 grados y avanzando
     for count in range(4):
         forward(end.x - start.x)
         left(90)
 
     end_fill()
 
+# Funcion que dibuja un circulo
 def drawcircle(start, end):
     "Draw circle from start to end."
     radius=((end.x-start.x)**2+(end.y-start.y)**2)**(1/2)/2
@@ -31,12 +34,14 @@ def drawcircle(start, end):
     circle(radius)
     end_fill()
 
+# Funcion que dibuja un rectángulo
 def rectangle(start, end):
     "Draw rectangle from start to end."
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
+    #Ciclo For que repite los movimientos para realizar el rectángulo
     for count in range(2):
         forward(end.x-start.x)
         right(90)    
@@ -45,12 +50,14 @@ def rectangle(start, end):
 
     end_fill()
 
+# Funcion que dibuja un triángulo
 def triangle(start, end):
     "Draw triangle from start to end."
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
+    #Ciclo for que hace los giros de 120 grados para formar el triángulo
     for count in range(3):
         forward(end.x - start.x)
         left(120)
@@ -78,6 +85,7 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
+#Se agregan colores
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
