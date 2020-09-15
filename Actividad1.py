@@ -1,6 +1,14 @@
+#TC001S.1 Actividad 1 PAINT GAME
+"""Videojuego que permite al usuario dibujar lineas, cuadrados, rectángulos, 
+círculos y triángulos y escoger entre 6 colores distintos"""
+
+#Dacia Martínez Díaz A01733799
+#Fernando Aguilar Acosta A00827677
+
 from turtle import *
 from freegames import vector
 
+#Function to draw a line
 def line(start, end):
     "Draw line from start to end."
     up()
@@ -8,6 +16,7 @@ def line(start, end):
     down()
     goto(end.x, end.y)
 
+#Function to draw and fill a square
 def square(start, end):
     "Draw square from start to end."
     up()
@@ -21,6 +30,7 @@ def square(start, end):
 
     end_fill()
 
+#Function to draw and fill a circle
 def drawcircle(start, end):
     "Draw circle from start to end."
     radius=((end.x-start.x)**2+(end.y-start.y)**2)**(1/2)/2
@@ -31,12 +41,14 @@ def drawcircle(start, end):
     circle(radius)
     end_fill()
 
+#Function to draw and fill a rectangle
 def rectangle(start, end):
     "Draw rectangle from start to end."
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
+
     for count in range(2):
         forward(end.x-start.x)
         right(90)    
@@ -45,6 +57,7 @@ def rectangle(start, end):
 
     end_fill()
 
+#Function to draw and fill a triangle
 def triangle(start, end):
     "Draw triangle from start to end."
     up()
@@ -78,12 +91,14 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
+#Commands to change color
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: color('purple'), 'P')
+#Commands to change shape
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', drawcircle), 'c')
