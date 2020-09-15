@@ -1,3 +1,10 @@
+#TC001S.1 Actividad 1 PAINT GAME
+"""Videojuego que permite al usuario dibujar lineas, cuadrados, rectángulos, 
+círculos y triángulos y escoger entre 6 colores distintos"""
+
+#Dacia Martínez Díaz A01733799
+#Fernando Aguilar Acosta A00827677
+
 from turtle import *
 from freegames import vector
 
@@ -85,13 +92,14 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
-#Se agregan colores
+#Comandos para cambiar colores
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: color('purple'), 'P')
+#Commands para cambiar figuras
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', drawcircle), 'c')
