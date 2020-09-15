@@ -6,3 +6,8 @@
 Project is created with:
 * Python
 * "Turtle graphics"
+
+## Bibliography
+Original code:
+http://www.grantjenks.com/docs/freegames/snake.html
+
