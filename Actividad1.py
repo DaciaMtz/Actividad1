@@ -33,8 +33,10 @@ def square(start, end):
 # Funcion que dibuja un circulo
 def drawcircle(start, end):
     "Draw circle from start to end."
+    #Cálculo del radio del círculo a partir de start y end
     radius=((end.x-start.x)**2+(end.y-start.y)**2)**(1/2)/2
     up()
+    #Punto de inicio para dibujar el círculo (En el eje x alineado con el centro, En el eje y en la parte inferior de la circunferencia)
     goto(start.x+(end.x-start.x)/2, start.y+(end.y-start.y)/2-radius)
     down()
     begin_fill()
